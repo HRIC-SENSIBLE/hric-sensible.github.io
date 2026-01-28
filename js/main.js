@@ -1,5 +1,5 @@
 /**
- * Drones4Energy Website - Main JavaScript
+ * SENSIBLE Project Website - Main JavaScript
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Update button state if video pauses/plays externally
         heroVideo.addEventListener('pause', function() {
             const icon = videoControl.querySelector('i');
             icon.classList.remove('fa-pause');
@@ -90,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ========================================
-    // Scroll Animations (Fade-in effect)
+    // Scroll Animations
     // ========================================
     const observerOptions = {
         root: null,
@@ -106,9 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Observe elements for animation
     const animatedElements = document.querySelectorAll(
-        '.feature-card, .partner-item, .member-card, .work-package, .publication-item, .event-item, .press-item'
+        '.feature-card, .partner-item, .member-card, .work-package, .publication-item, .event-item, .press-item, .demo-item'
     );
     
     animatedElements.forEach(el => {
@@ -118,7 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
     
-    // Add visible class styles
     const style = document.createElement('style');
     style.textContent = `
         .visible {
@@ -139,14 +136,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 heroVideo.style.display = 'none';
             }
         });
-        
-        // If video source is empty, show poster
-        if (!heroVideo.querySelector('source')?.src || heroVideo.querySelector('source')?.src === '') {
-            const poster = document.querySelector('.hero-poster');
-            if (poster) {
-                poster.style.display = 'block';
-            }
-        }
     }
     
     // ========================================
@@ -163,11 +152,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         link.addEventListener('click', function(e) {
-            // On touch devices, first tap opens dropdown, second tap navigates
             if (touchStarted && window.innerWidth <= 768) {
                 if (!item.classList.contains('dropdown-open')) {
                     e.preventDefault();
-                    // Close other dropdowns
                     dropdownItems.forEach(other => {
                         if (other !== item) {
                             other.classList.remove('dropdown-open');
@@ -180,7 +167,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Close dropdowns when clicking elsewhere
     document.addEventListener('click', function(e) {
         if (!e.target.closest('.has-dropdown')) {
             dropdownItems.forEach(item => {
@@ -189,58 +175,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // ========================================
-    // Active Navigation Highlighting
-    // ========================================
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('.nav-menu > li');
-    
-    navLinks.forEach(item => {
-        const link = item.querySelector('a');
-        const href = link?.getAttribute('href');
-        
-        if (href) {
-            const linkPage = href.split('/').pop();
-            if (linkPage === currentPage) {
-                item.classList.add('active');
-            } else {
-                // Check dropdown items too
-                const dropdownLinks = item.querySelectorAll('.dropdown a');
-                dropdownLinks.forEach(dropLink => {
-                    const dropHref = dropLink.getAttribute('href');
-                    if (dropHref && dropHref.split('/').pop() === currentPage) {
-                        item.classList.add('active');
-                    }
-                });
-            }
-        }
-    });
-    
-    // ========================================
-    // Lazy Loading Images
-    // ========================================
-    const lazyImages = document.querySelectorAll('img[data-src]');
-    
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    imageObserver.unobserve(img);
-                }
-            });
-        });
-        
-        lazyImages.forEach(img => imageObserver.observe(img));
-    } else {
-        // Fallback for browsers without IntersectionObserver
-        lazyImages.forEach(img => {
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-        });
-    }
-    
-    console.log('Drones4Energy website initialized successfully.');
+    console.log('SENSIBLE website initialized successfully.');
 });
