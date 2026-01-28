@@ -172,14 +172,25 @@ img {
     max-width: 900px;
 }
 
-.hero-logo {
-    width: 100px;
+/* .hero-logo {
+    width: 350px;
     height: auto;
     margin-bottom: 20px;
     border-radius: 50%;
     background: white;
     padding: 5px;
+} */
+
+.hero-logo {
+    width: 350px;
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
 }
+
 
 .hero-title {
     font-size: 56px;
@@ -349,12 +360,23 @@ img {
     background: rgba(0, 0, 0, 0.4);
 }
 
-.page-header .header-logo {
+/* .page-header .header-logo {
     width: 80px;
     height: auto;
     border-radius: 50%;
     background: white;
     padding: 3px;
+    position: relative;
+    z-index: 2;
+} */
+
+.page-header .header-logo {
+    width: 280px;
+    max-width: 80%;
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
     position: relative;
     z-index: 2;
 }
