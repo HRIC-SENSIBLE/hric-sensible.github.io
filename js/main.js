@@ -37,36 +37,70 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ========================================
-    // Video Control (Play/Pause)
+    // Video Control (Play/Pause) - 支持多个视频
     // ========================================
     const videoControl = document.querySelector('.video-control');
-    const heroVideo = document.querySelector('.hero-video');
+    // 选择所有 hero-video 元素（包括 bg 和 main）
+    const heroVideos = document.querySelectorAll('.hero-video');
     
-    if (videoControl && heroVideo) {
+    if (videoControl && heroVideos.length > 0) {
+        // 播放/暂停所有视频
         videoControl.addEventListener('click', function() {
             const icon = videoControl.querySelector('i');
-            if (heroVideo.paused) {
-                heroVideo.play();
+            // 检查第一个视频的状态来决定操作
+            const firstVideo = heroVideos[0];
+            
+            if (firstVideo.paused) {
+                // 播放所有视频
+                heroVideos.forEach(video => {
+                    video.play().catch(err => console.log('Video play error:', err));
+                });
                 icon.classList.remove('fa-play');
                 icon.classList.add('fa-pause');
             } else {
-                heroVideo.pause();
+                // 暂停所有视频
+                heroVideos.forEach(video => {
+                    video.pause();
+                });
                 icon.classList.remove('fa-pause');
                 icon.classList.add('fa-play');
             }
         });
         
-        heroVideo.addEventListener('pause', function() {
+        // 监听主视频的状态变化来更新图标
+        const mainVideo = document.querySelector('.hero-video--main') || heroVideos[0];
+        
+        mainVideo.addEventListener('pause', function() {
             const icon = videoControl.querySelector('i');
             icon.classList.remove('fa-pause');
             icon.classList.add('fa-play');
         });
         
-        heroVideo.addEventListener('play', function() {
+        mainVideo.addEventListener('play', function() {
             const icon = videoControl.querySelector('i');
             icon.classList.remove('fa-play');
             icon.classList.add('fa-pause');
         });
+        
+        // 同步两个视频的播放时间（可选，防止不同步）
+        if (heroVideos.length > 1) {
+            const bgVideo = document.querySelector('.hero-video--bg');
+            const mainVideoEl = document.querySelector('.hero-video--main');
+            
+            if (bgVideo && mainVideoEl) {
+                // 当主视频 seek 时，同步背景视频
+                mainVideoEl.addEventListener('seeked', function() {
+                    bgVideo.currentTime = mainVideoEl.currentTime;
+                });
+                
+                // 定期同步（每5秒检查一次）
+                setInterval(function() {
+                    if (!mainVideoEl.paused && Math.abs(bgVideo.currentTime - mainVideoEl.currentTime) > 0.5) {
+                        bgVideo.currentTime = mainVideoEl.currentTime;
+                    }
+                }, 5000);
+            }
+        }
     }
     
     // ========================================
@@ -128,13 +162,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     // Handle Video Loading Fallback
     // ========================================
-    if (heroVideo) {
-        heroVideo.addEventListener('error', function() {
-            const poster = document.querySelector('.hero-poster');
-            if (poster) {
-                poster.style.display = 'block';
-                heroVideo.style.display = 'none';
-            }
+    if (heroVideos.length > 0) {
+        heroVideos.forEach(video => {
+            video.addEventListener('error', function() {
+                const poster = document.querySelector('.hero-poster');
+                if (poster) {
+                    poster.style.display = 'block';
+                    heroVideos.forEach(v => v.style.display = 'none');
+                }
+            });
         });
     }
     
