@@ -93,7 +93,7 @@ img {
     z-index: 1;
 }
 
-/* .hero-video:not([src]),
+.hero-video:not([src]),
 .hero-video[src=""] {
     display: none;
 }
@@ -101,7 +101,7 @@ img {
 .hero-video:not([src]) ~ .hero-poster,
 .hero-video[src=""] ~ .hero-poster {
     display: block;
-} */
+}
 
 .hero-overlay {
     position: absolute;
