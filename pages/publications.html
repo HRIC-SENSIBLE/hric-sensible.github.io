@@ -64,6 +64,59 @@
         .publication-item a:hover {
             text-decoration: underline;
         }
+        
+        /* BibTeX Button and Container */
+        .bibtex-btn {
+            display: inline-block;
+            color: #2ecc71;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+        .bibtex-btn:hover {
+            text-decoration: underline;
+        }
+        .bibtex-container {
+            display: none;
+            margin-top: 15px;
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 15px;
+            position: relative;
+        }
+        .bibtex-container.active {
+            display: block;
+        }
+        .bibtex-container pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+            color: #333;
+            line-height: 1.5;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #2ecc71;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .copy-btn:hover {
+            background: #27ae60;
+        }
+        .copy-btn.copied {
+            background: #666;
+        }
+        
         .thesis-item {
             background: #f9f9f9;
             padding: 15px 20px;
@@ -158,22 +211,67 @@
             <div class="year-section">
                 <h4>2025</h4>
                 
+                <!-- Paper 1: Diff-MSM -->
                 <div class="publication-item">
                     <h4>Diff-MSM: Differentiable MusculoSkeletal Model for Simultaneous Identification of Human Muscle and Bone Parameters</h4>
                     <p class="authors">Zhou Y, Sanderink P, Lemming SJ, Fang C</p>
                     <p class="venue">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2025, pp. 20616-20623</p>
+                    <span class="bibtex-btn" onclick="toggleBibtex(this)">[BibTeX]</span>
+                    <div class="bibtex-container">
+                        <button class="copy-btn" onclick="copyBibtex(this)">Copy</button>
+<pre>@INPROCEEDINGS{11247268,
+  author={Zhou, Yingfan and Sanderink, Philip and Lemming, Sigurd Jager and Fang, Cheng},
+  booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  title={Diff-MSM: Differentiable MusculoSkeletal Model for Simultaneous Identification of Human Muscle and Bone Parameters}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={20616-20623},
+  keywords={Torque;Parameter estimation;Biological system modeling;Muscles;Bones;Torque measurement;Motion measurement;Standards;Monitoring;Sports},
+  doi={10.1109/IROS60139.2025.11247268}}</pre>
+                    </div>
                 </div>
                 
+                <!-- Paper 2: Stiffness regulation -->
                 <div class="publication-item">
-                    <h4>Stiffness regulation co-pilot in bilateral teleimpedance control: a preliminary user study</h4>
+                    <h4>Stiffness Regulation Co-Pilot in Bilateral Teleimpedance Control: A Preliminary User Study</h4>
                     <p class="authors">Hernandez PG, Jakobsen JM, Pacchierotti C, Chinello F, Fang C</p>
-                    <p class="venue">IEEE International Conference on Robotics and Automation (ICRA), 2025</p>
+                    <p class="venue">IEEE International Conference on Robotics and Automation (ICRA), 2025, pp. 5622-5628</p>
+                    <span class="bibtex-btn" onclick="toggleBibtex(this)">[BibTeX]</span>
+                    <div class="bibtex-container">
+                        <button class="copy-btn" onclick="copyBibtex(this)">Copy</button>
+<pre>@INPROCEEDINGS{11127810,
+  author={Hernandez, Pedro Gomez and Jakobsen, Jonas Mariager and Pacchierotti, Claudio and Chinello, Francesco and Fang, Cheng},
+  booktitle={2025 IEEE International Conference on Robotics and Automation (ICRA)}, 
+  title={Stiffness Regulation Co-Pilot in Bilateral Teleimpedance Control: A Preliminary User Study}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={5622-5628},
+  keywords={Couplings;Limbs;Accuracy;Robot kinematics;Ergonomics;Muscles;Cognitive load;Regulation},
+  doi={10.1109/ICRA55743.2025.11127810}}</pre>
+                    </div>
                 </div>
                 
+                <!-- Paper 3: Haptic directional guidance -->
                 <div class="publication-item">
-                    <h4>Evaluation of an interaction design for haptic directional guidance</h4>
+                    <h4>Evaluation of an Interaction Design for Haptic Directional Guidance</h4>
                     <p class="authors">Hernandez PG</p>
                     <p class="venue">IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW), 2025, pp. 887-891</p>
+                    <span class="bibtex-btn" onclick="toggleBibtex(this)">[BibTeX]</span>
+                    <div class="bibtex-container">
+                        <button class="copy-btn" onclick="copyBibtex(this)">Copy</button>
+<pre>@INPROCEEDINGS{10972838,
+  author={Hernandez, Pedro Gomez},
+  booktitle={2025 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW)}, 
+  title={Evaluation of an interaction design for haptic directional guidance}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={887-891},
+  keywords={Three-dimensional displays;Frequency modulation;Error analysis;Interactive systems;Force;Force feedback;Virtual reality;User interfaces;Market research;Frequency control;Haptics;Design;Cutaneous Feedback},
+  doi={10.1109/VRW66409.2025.00181}}</pre>
+                    </div>
                 </div>
             </div>
             
@@ -181,10 +279,25 @@
             <div class="year-section">
                 <h4>2024</h4>
                 
+                <!-- Paper 4: Human Compliance -->
                 <div class="publication-item">
                     <h4>Estimation of Human Compliance Parameters during Robot Kinesthetic Teaching by Compensation of the Dynamics of the Force-Torque Sensor</h4>
                     <p class="authors">Diget EL, Iturrate I, Sloth C</p>
                     <p class="venue">IEEE 20th International Conference on Automation Science and Engineering (CASE), 2024, pp. 3393-3399</p>
+                    <span class="bibtex-btn" onclick="toggleBibtex(this)">[BibTeX]</span>
+                    <div class="bibtex-container">
+                        <button class="copy-btn" onclick="copyBibtex(this)">Copy</button>
+<pre>@INPROCEEDINGS{10711807,
+  author={Diget, Emil Lykke and Iturrate, Iñigo and Sloth, Christoffer},
+  booktitle={2024 IEEE 20th International Conference on Automation Science and Engineering (CASE)}, 
+  title={Estimation of Human Compliance Parameters during Robot Kinesthetic Teaching by Compensation of the Dynamics of the Force-Torque Sensor}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={3393-3399},
+  keywords={Force measurement;Parameter estimation;Dynamics;Education;Force;Human-robot interaction;Transfer functions;Robot sensing systems;Manipulators;Pins},
+  doi={10.1109/CASE59546.2024.10711807}}</pre>
+                    </div>
                 </div>
             </div>
             
@@ -192,28 +305,96 @@
             <div class="year-section">
                 <h4>2023</h4>
                 
+                <!-- Paper 5: Human modeling survey -->
                 <div class="publication-item">
-                    <h4>Human modeling in physical human-robot interaction: A brief survey</h4>
+                    <h4>Human Modeling in Physical Human-Robot Interaction: A Brief Survey</h4>
                     <p class="authors">Fang C, Peternel L, Seth A, Sartori M, Mombaur K, Yoshida E</p>
                     <p class="venue">IEEE Robotics and Automation Letters, 2023, Vol. 8, No. 9, pp. 5799-5806</p>
+                    <span class="bibtex-btn" onclick="toggleBibtex(this)">[BibTeX]</span>
+                    <div class="bibtex-container">
+                        <button class="copy-btn" onclick="copyBibtex(this)">Copy</button>
+<pre>@ARTICLE{10185034,
+  author={Fang, Cheng and Peternel, Luka and Seth, Ajay and Sartori, Massimo and Mombaur, Katja and Yoshida, Eiichi},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={Human Modeling in Physical Human-Robot Interaction: A Brief Survey}, 
+  year={2023},
+  volume={8},
+  number={9},
+  pages={5799-5806},
+  keywords={Robots;Robot sensing systems;Muscles;Robot kinematics;Biological system modeling;Joints;Perturbation methods;Physical human-robot interaction;modeling and simulating humans;human-centered robotics},
+  doi={10.1109/LRA.2023.3296349}}</pre>
+                    </div>
                 </div>
                 
+                <!-- Paper 6: Online impedance adaptation -->
                 <div class="publication-item">
-                    <h4>An online impedance adaptation controller for decoding skill intelligence</h4>
+                    <h4>An Online Impedance Adaptation Controller for Decoding Skill Intelligence</h4>
                     <p class="authors">Xiong X, Fang C</p>
                     <p class="venue">Biomimetic Intelligence and Robotics, 2023, Vol. 3, No. 2, 100100</p>
+                    <span class="bibtex-btn" onclick="toggleBibtex(this)">[BibTeX]</span>
+                    <div class="bibtex-container">
+                        <button class="copy-btn" onclick="copyBibtex(this)">Copy</button>
+<pre>@article{2c4c2a80bbdf4ebc84b2a252d8fe071d,
+  title = "An Online Impedance Adaptation Controller for Decoding Skill Intelligence",
+  author = "Xiaofeng Xiong and Cheng Fang",
+  year = "2023",
+  month = jun,
+  doi = "10.1016/j.birob.2023.100100",
+  language = "English",
+  volume = "3",
+  journal = "Biomimetic Intelligence and Robotics",
+  issn = "2667-3797",
+  publisher = "Elsevier",
+  number = "2",
+}</pre>
+                    </div>
                 </div>
                 
+                <!-- Paper 7: Handle with Haptic Devices -->
                 <div class="publication-item">
                     <h4>Preliminary Study on a Handle with Haptic Devices for Collaborative Robotics in a Remote Maintenance Environment</h4>
                     <p class="authors">Achilli GM, Chinello F, Fang C, Hernandez PG, Logozzo S, Valigi MC</p>
                     <p class="venue">International Workshop IFToMM for Sustainable Development Goals, 2023, pp. 484-491, Springer Nature Switzerland</p>
+                    <span class="bibtex-btn" onclick="toggleBibtex(this)">[BibTeX]</span>
+                    <div class="bibtex-container">
+                        <button class="copy-btn" onclick="copyBibtex(this)">Copy</button>
+<pre>@inproceedings{3f8bd244e3694dec834f48dccaffebe2,
+  title = "Preliminary Study on a Handle with Haptic Devices for Collaborative Robotics in a Remote Maintenance Environment",
+  author = "Achilli, {Gabriele Maria} and Francesco Chinello and Cheng Fang and Hernandez, {Pedro Gomez} and Silvia Logozzo and Valigi, {Maria Cristina}",
+  year = "2023",
+  doi = "10.1007/978-3-031-32439-0_55",
+  language = "English",
+  isbn = "978-3-031-32438-3",
+  series = "Mechanisms and Machine Science",
+  publisher = "Springer",
+  pages = "484--491",
+  editor = "Victor Petuya and Giuseppe Quaglia and Tigran Parikyan and Giuseppe Carbone",
+  booktitle = "Proceedings of I4SDG Workshop 2023",
+  address = "Netherlands",
+}</pre>
+                    </div>
                 </div>
                 
+                <!-- Paper 8: PREDICTOR -->
                 <div class="publication-item">
-                    <h4>Predictor: a physical emulator enabling safety and ergonomics evaluation and training of physical human-robot collaboration</h4>
+                    <h4>PREDICTOR: A Physical Emulator Enabling Safety and Ergonomics Evaluation and Training of Physical Human-Robot Collaboration</h4>
                     <p class="authors">Sunesson CE, Schøn DT, Hassø CN, Chinello F, Fang C</p>
                     <p class="venue">Frontiers in Neurorobotics, 2023, Vol. 17, 1080038</p>
+                    <span class="bibtex-btn" onclick="toggleBibtex(this)">[BibTeX]</span>
+                    <div class="bibtex-container">
+                        <button class="copy-btn" onclick="copyBibtex(this)">Copy</button>
+<pre>@article{689c7d3f62454acc8eaec8d834c1292a,
+  title = "PREDICTOR: A Physical emulatoR enabling safEty anD ergonomICs evaluation and Training of physical human-rObot collaboRation",
+  author = "Sunesson, {Carl Emil} and Schøn, {Daniel Tofte} and Hassø, {Christopher Nybo Ploug} and Francesco Chinello and Cheng Fang",
+  year = "2023",
+  doi = "10.3389/fnbot.2023.1080038",
+  language = "English",
+  volume = "17",
+  journal = "Frontiers in Neurorobotics",
+  issn = "1662-5218",
+  publisher = "Frontiers Research Foundation",
+}</pre>
+                    </div>
                 </div>
             </div>
             
@@ -305,5 +486,54 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    
+    <!-- BibTeX Toggle and Copy Script -->
+    <script>
+        // Toggle BibTeX visibility
+        function toggleBibtex(btn) {
+            const container = btn.nextElementSibling;
+            container.classList.toggle('active');
+            
+            // Update button text
+            if (container.classList.contains('active')) {
+                btn.textContent = '[Hide BibTeX]';
+            } else {
+                btn.textContent = '[BibTeX]';
+            }
+        }
+        
+        // Copy BibTeX to clipboard
+        function copyBibtex(btn) {
+            const pre = btn.nextElementSibling;
+            const text = pre.textContent;
+            
+            navigator.clipboard.writeText(text).then(function() {
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+                
+                setTimeout(function() {
+                    btn.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Failed to copy: ', err);
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+                
+                setTimeout(function() {
+                    btn.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
