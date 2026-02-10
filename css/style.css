@@ -97,6 +97,21 @@ img {
     transform: none;
 }
 
+/* 背景氛围层：铺满 + 模糊 */
+.hero-video--bg{
+    z-index: 0;
+    object-fit: cover;
+    filter: blur(18px) brightness(0.7);
+    transform: scale(1.12); /* 防止模糊边缘露出 */
+}
+
+/* 主层：完整显示，不裁剪 */
+.hero-video--main{
+    z-index: 1;
+    object-fit: contain;
+    object-position: center;
+}
+
 .hero-poster {
     display: none;
     position: absolute;

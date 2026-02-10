@@ -20,16 +20,20 @@
     <!-- Hero Section with Video Background -->
     <section class="hero" id="home">
         <!-- Video Background -->
-        <video class="hero-video"
+        <!-- <video class="hero-video"
             src="videos/background.mp4"
             autoplay muted loop playsinline
             poster="images/hero-poster.jpg">
         <source src="videos/background.mp4" type="video/mp4">
-        </video>
+        </video> -->
 
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="videos/background_compress.mp4" type="video/mp4">
-        </video>
+        <!-- Blur background layer (fill) -->
+        <video class="hero-video hero-video--bg" autoplay muted loop playsinline
+            src="videos/background.mp4" poster="images/hero-poster.jpg"></video>
+        
+        <!-- Main layer (full frame, no crop) -->
+        <video class="hero-video hero-video--main" autoplay muted loop playsinline
+            src="videos/background.mp4" poster="images/hero-poster.jpg"></video>
         
         <!-- Fallback Poster Image -->
         <img src="images/hero-poster.jpg" alt="Wind turbine maintenance" class="hero-poster">
