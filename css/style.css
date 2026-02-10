@@ -66,6 +66,7 @@ img {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background: #1a1a1a;
 }
 
 .hero-video {
@@ -78,6 +79,7 @@ img {
     height: auto;
     transform: translate(-50%, -50%);
     z-index: 1;
+    object-fit: cover;
 }
 
 .hero-poster {
@@ -107,15 +109,8 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--overlay-dark);
     z-index: 2;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-    color: white;
 }
 
 /* Video Tags */
@@ -171,9 +166,10 @@ img {
 
 /* Hero Content */
 .hero-content {
+    position: relative;
     text-align: center;
     color: var(--white);
-    z-index: 5;
+    z-index: 3;
     padding: 20px;
     max-width: 900px;
 }
@@ -418,13 +414,13 @@ img {
 .project-overview .overview-content {
     max-width: 900px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .project-overview h4 {
     font-size: 20px;
     color: var(--text-dark);
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .project-overview p {
@@ -568,12 +564,6 @@ img {
     font-size: 15px;
     color: var(--text-light);
     line-height: 1.7;
-}
-
-.partner-info .partner-leader {
-    font-size: 14px;
-    color: var(--primary-green);
-    margin-bottom: 15px;
 }
 
 .partner-logo {
@@ -1016,6 +1006,12 @@ footer {
 
 .footer-social .social-icons a.twitter-x {
     background: #000000;
+}
+
+.footer-social .social-icons a.twitter-x svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
 }
 
 .footer-social .social-icons a.linkedin {
