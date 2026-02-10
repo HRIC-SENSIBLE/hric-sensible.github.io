@@ -1227,3 +1227,9 @@ footer {
 .hidden {
     display: none;
 }
+
+/* 隐藏视频标签和poster图片 */
+.video-tag,
+.hero-poster {
+    display: none !important;
+}
