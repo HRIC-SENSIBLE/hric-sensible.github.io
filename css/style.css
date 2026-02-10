@@ -349,6 +349,7 @@ video playing related bug
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;  /* 确保有这行 */
     justify-content: center;
     background-size: cover;
     background-position: center;
@@ -376,6 +377,7 @@ video playing related bug
 } */
 
 .page-header .header-logo {
+    display: none;
     width: 280px;
     max-width: 80%;
     height: auto;
@@ -394,6 +396,8 @@ video playing related bug
     z-index: 2;
     margin-top: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
 }
 
 .page-header .tagline {
