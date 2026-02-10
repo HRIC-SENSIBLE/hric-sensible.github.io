@@ -93,6 +93,9 @@ img {
     z-index: 1;
 }
 
+/*
+video playing related bug
+*/
 .hero-video:not([src]),
 .hero-video[src=""] {
     display: none;
