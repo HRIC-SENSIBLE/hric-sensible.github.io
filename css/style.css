@@ -409,6 +409,12 @@ img {
     background: var(--white);
 }
 
+.project-overview .overview-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .project-overview h4 {
     font-size: 20px;
     color: var(--text-dark);
@@ -419,7 +425,8 @@ img {
     font-size: 16px;
     color: var(--text-light);
     line-height: 1.8;
-    max-width: 900px;
+    text-align: justify;
+    margin-bottom: 15px;
 }
 
 .project-overview em {
