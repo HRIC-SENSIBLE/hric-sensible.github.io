@@ -4,11 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SENSIBLE Scientific Publications">
-    <title>Scientific Publications – SENSIBLE</title>
+    <title>Publications – SENSIBLE</title>
     
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .publications-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .publications-section h3 {
+            color: #2ecc71;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2ecc71;
+        }
+        .year-section {
+            margin-bottom: 30px;
+        }
+        .year-section h4 {
+            color: #333;
+            font-size: 20px;
+            margin: 25px 0 15px 0;
+            padding-left: 10px;
+            border-left: 4px solid #27ae60;
+        }
+        .publication-item {
+            background: #fff;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-left: 4px solid #2ecc71;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .publication-item h4 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+            border: none;
+            padding: 0;
+        }
+        .publication-item .authors {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .publication-item .venue {
+            font-size: 14px;
+            color: #2ecc71;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .publication-item a {
+            color: #2ecc71;
+            font-size: 14px;
+            margin-right: 15px;
+        }
+        .publication-item a:hover {
+            text-decoration: underline;
+        }
+        .thesis-item {
+            background: #f9f9f9;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-radius: 5px;
+        }
+        .thesis-item h5 {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .thesis-item p {
+            font-size: 13px;
+            color: #666;
+            margin: 0;
+        }
+        .workshop-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .workshop-item h5 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .workshop-item p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .workshop-item a {
+            color: #3498db;
+        }
+    </style>
 </head>
 <body>
 
@@ -28,49 +120,28 @@
             <ul class="nav-menu">
                 <li class="has-dropdown">
                     <a href="../index.html">Home</a>
-                    <ul class="dropdown">
-                        <li><a href="to-design.html">To-design</a></li>
-                    </ul>
                 </li>
                 <li class="has-dropdown">
                     <a href="project-plan.html">Project Plan</a>
                     <ul class="dropdown">
                         <li><a href="deliverables.html">Deliverables</a></li>
-                        <li><a href="to-design.html">To-design</a></li>
                     </ul>
                 </li>
                 <li class="has-dropdown">
                     <a href="partners.html">Partners</a>
-                    <ul class="dropdown">
-                        <li><a href="project-members.html">Project members</a></li>
-                        <li><a href="to-design.html">To-design</a></li>
-                    </ul>
                 </li>
                 <li class="has-dropdown active">
                     <a href="publications.html">Project Outcome</a>
                     <ul class="dropdown">
-                        <li><a href="publications.html">Scientific Publications</a></li>
+                        <li><a href="publications.html">Publications</a></li>
                         <li><a href="demos.html">Demos</a></li>
-                        <li><a href="to-design.html">To-design</a></li>
                     </ul>
                 </li>
                 <li class="has-dropdown">
                     <a href="news-events.html">News and Events</a>
-                    <ul class="dropdown">
-                        <li><a href="to-design.html">To-design</a></li>
-                    </ul>
-                </li>
-                <li class="has-dropdown">
-                    <a href="press-release.html">Press Release</a>
-                    <ul class="dropdown">
-                        <li><a href="to-design.html">To-design</a></li>
-                    </ul>
                 </li>
                 <li class="has-dropdown">
                     <a href="contact.html">Contact</a>
-                    <ul class="dropdown">
-                        <li><a href="to-design.html">To-design</a></li>
-                    </ul>
                 </li>
             </ul>
         </div>
@@ -80,25 +151,128 @@
     <section class="publications-section">
         <div class="container">
             
-            <div class="publication-item">
-                <h4>Publication Title 1</h4>
-                <p class="authors">Authors: Author A, Author B, Author C</p>
-                <p class="venue">Journal/Conference Name, Year</p>
-                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> View Publication</a>
+            <!-- Scientific Publications -->
+            <h3><i class="fas fa-file-alt"></i> Scientific Publications</h3>
+            
+            <!-- 2025 -->
+            <div class="year-section">
+                <h4>2025</h4>
+                
+                <div class="publication-item">
+                    <h4>Diff-MSM: Differentiable MusculoSkeletal Model for Simultaneous Identification of Human Muscle and Bone Parameters</h4>
+                    <p class="authors">Zhou Y, Sanderink P, Lemming SJ, Fang C</p>
+                    <p class="venue">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2025, pp. 20616-20623</p>
+                </div>
+                
+                <div class="publication-item">
+                    <h4>Stiffness regulation co-pilot in bilateral teleimpedance control: a preliminary user study</h4>
+                    <p class="authors">Hernandez PG, Jakobsen JM, Pacchierotti C, Chinello F, Fang C</p>
+                    <p class="venue">IEEE International Conference on Robotics and Automation (ICRA), 2025</p>
+                </div>
+                
+                <div class="publication-item">
+                    <h4>Evaluation of an interaction design for haptic directional guidance</h4>
+                    <p class="authors">Hernandez PG</p>
+                    <p class="venue">IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW), 2025, pp. 887-891</p>
+                </div>
             </div>
             
-            <div class="publication-item">
-                <h4>Publication Title 2</h4>
-                <p class="authors">Authors: Author A, Author B</p>
-                <p class="venue">Journal/Conference Name, Year</p>
-                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> View Publication</a>
+            <!-- 2024 -->
+            <div class="year-section">
+                <h4>2024</h4>
+                
+                <div class="publication-item">
+                    <h4>Estimation of Human Compliance Parameters during Robot Kinesthetic Teaching by Compensation of the Dynamics of the Force-Torque Sensor</h4>
+                    <p class="authors">Diget EL, Iturrate I, Sloth C</p>
+                    <p class="venue">IEEE 20th International Conference on Automation Science and Engineering (CASE), 2024, pp. 3393-3399</p>
+                </div>
             </div>
             
-            <div class="publication-item">
-                <h4>Publication Title 3</h4>
-                <p class="authors">Authors: Author A, Author B, Author C, Author D</p>
-                <p class="venue">Journal/Conference Name, Year</p>
-                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> View Publication</a>
+            <!-- 2023 -->
+            <div class="year-section">
+                <h4>2023</h4>
+                
+                <div class="publication-item">
+                    <h4>Human modeling in physical human-robot interaction: A brief survey</h4>
+                    <p class="authors">Fang C, Peternel L, Seth A, Sartori M, Mombaur K, Yoshida E</p>
+                    <p class="venue">IEEE Robotics and Automation Letters, 2023, Vol. 8, No. 9, pp. 5799-5806</p>
+                </div>
+                
+                <div class="publication-item">
+                    <h4>An online impedance adaptation controller for decoding skill intelligence</h4>
+                    <p class="authors">Xiong X, Fang C</p>
+                    <p class="venue">Biomimetic Intelligence and Robotics, 2023, Vol. 3, No. 2, 100100</p>
+                </div>
+                
+                <div class="publication-item">
+                    <h4>Preliminary Study on a Handle with Haptic Devices for Collaborative Robotics in a Remote Maintenance Environment</h4>
+                    <p class="authors">Achilli GM, Chinello F, Fang C, Hernandez PG, Logozzo S, Valigi MC</p>
+                    <p class="venue">International Workshop IFToMM for Sustainable Development Goals, 2023, pp. 484-491, Springer Nature Switzerland</p>
+                </div>
+                
+                <div class="publication-item">
+                    <h4>Predictor: a physical emulator enabling safety and ergonomics evaluation and training of physical human-robot collaboration</h4>
+                    <p class="authors">Sunesson CE, Schøn DT, Hassø CN, Chinello F, Fang C</p>
+                    <p class="venue">Frontiers in Neurorobotics, 2023, Vol. 17, 1080038</p>
+                </div>
+            </div>
+            
+            <!-- Workshops -->
+            <h3><i class="fas fa-users"></i> Workshops</h3>
+            
+            <div class="workshop-item">
+                <h5>IROS 2025 Workshop – Hangzhou, China</h5>
+                <p><strong>Second Human Modeling Workshop:</strong> AI-Powered Human Modeling for Healthcare Robotics</p>
+                <p><a href="https://sites.google.com/view/iros25-human-modelling-ai/home" target="_blank"><i class="fas fa-external-link-alt"></i> Workshop Website</a></p>
+            </div>
+            
+            <div class="workshop-item">
+                <h5>ICRA 2024 Workshop – Yokohama, Japan</h5>
+                <p><strong>First Human Modeling Workshop:</strong> Innovations and Applications of Human Modeling in Physical Human-Robot Interaction</p>
+                <p><a href="https://sites.google.com/view/icra2024-workshop-human-phri/home" target="_blank"><i class="fas fa-external-link-alt"></i> Workshop Website</a></p>
+            </div>
+            
+            <!-- Master Theses -->
+            <h3><i class="fas fa-graduation-cap"></i> Master Theses</h3>
+            
+            <!-- 2026 -->
+            <div class="year-section">
+                <h4>2026</h4>
+                <div class="thesis-item">
+                    <h5>Improving the safety and functionality of a robotic teleoperation system</h5>
+                    <p><strong>Author:</strong> Ioannis Tarasidis | <strong>Supervisor:</strong> Cheng Fang | University of Southern Denmark</p>
+                </div>
+            </div>
+            
+            <!-- 2025 -->
+            <div class="year-section">
+                <h4>2025</h4>
+                <div class="thesis-item">
+                    <h5>Using a Mobile Manipulator as the Master Device for a Robotic Teleoperation System</h5>
+                    <p><strong>Authors:</strong> Jonas Jakobsen, Jeppe Hansen | <strong>Supervisor:</strong> Cheng Fang | University of Southern Denmark</p>
+                </div>
+                <div class="thesis-item">
+                    <h5>Simulation of safe physical human-robot interaction with a personalized human musculoskeletal model</h5>
+                    <p><strong>Authors:</strong> Philip Sanderink, Sigurd Jager Lemming | <strong>Supervisor:</strong> Cheng Fang | University of Southern Denmark</p>
+                </div>
+            </div>
+            
+            <!-- 2024 -->
+            <div class="year-section">
+                <h4>2024</h4>
+                <div class="thesis-item">
+                    <h5>Enhancing Teleoperated Wind Turbine Blade Maintenance Robotic System for Improved Efficiency and Operator Ergonomics</h5>
+                    <p><strong>Authors:</strong> Emil Siggi Asgeirsson, Ibrahim Haj Yousef | <strong>Supervisor:</strong> Cheng Fang | University of Southern Denmark</p>
+                </div>
+            </div>
+            
+            <!-- 2023 -->
+            <div class="year-section">
+                <h4>2023</h4>
+                <div class="thesis-item">
+                    <h5>Training of Physical Human-Robot Interaction Using Interactive Robot-VR Systems</h5>
+                    <p><strong>Author:</strong> Carl Emil Sunesson | <strong>Supervisor:</strong> Cheng Fang | University of Southern Denmark</p>
+                </div>
             </div>
             
         </div>
@@ -108,7 +282,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-social">
-                <p>Follow us in social media:</p>
+                <p>Follow us on social media:</p>
                 <div class="social-icons">
                     <a href="https://x.com" target="_blank" rel="noopener" aria-label="X (Twitter)" class="twitter-x">
                         <i class="fab fa-x-twitter"></i>

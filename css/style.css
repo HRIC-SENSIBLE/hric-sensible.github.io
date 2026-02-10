@@ -557,6 +557,12 @@ img {
     line-height: 1.7;
 }
 
+.partner-info .partner-leader {
+    font-size: 14px;
+    color: var(--primary-green);
+    margin-bottom: 15px;
+}
+
 .partner-logo {
     flex-shrink: 0;
     width: 200px;
