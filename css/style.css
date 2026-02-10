@@ -69,7 +69,7 @@ img {
     background: #1a1a1a;
 }
 
-.hero-video {
+/* .hero-video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -80,6 +80,21 @@ img {
     transform: translate(-50%, -50%);
     z-index: 1;
     object-fit: contain;
+} */
+
+.hero-video{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    /* 关键：完整显示整帧，不裁剪 */
+    object-fit: contain;
+    object-position: center;
+
+    /* 不再需要居中平移 */
+    transform: none;
 }
 
 .hero-poster {
