@@ -1266,3 +1266,9 @@ footer {
 .hero-poster {
     display: none !important;
 }
+
+/* SENSIBLE 字母高亮 */
+.highlight {
+    color: #76B900;
+    font-weight: 700;
+}
