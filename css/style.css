@@ -4,7 +4,8 @@
 
 /* CSS Variables */
 :root {
-    --primary-green: #2ecc71;
+    /* --primary-green: #2ecc71; */
+    --primary-green: #76B900;  /* NVIDIA 绿色 */
     --dark-green: #27ae60;
     --light-green: #58d68d;
     --text-dark: #333333;
@@ -239,7 +240,8 @@ video playing related bug
 
 .hero-subtitle {
     font-size: 18px;
-    color: #e74c3c;
+    /* color: #e74c3c; */
+    color: rgba(255, 255, 255, 0.9);  /* 白色，清晰且优雅 */
     font-weight: 400;
     letter-spacing: 1px;
     line-height: 1.5;
@@ -432,7 +434,8 @@ video playing related bug
 }
 
 .page-header .tagline {
-    color: #e74c3c;
+    /* color: #e74c3c; */
+    color: rgba(255, 255, 255, 0.85);  /* 白色 */
     font-size: 14px;
     position: relative;
     z-index: 2;
