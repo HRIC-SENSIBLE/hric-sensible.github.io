@@ -490,6 +490,7 @@ video playing related bug
 .features-title h4 {
     font-size: 22px;
     color: var(--text-dark);
+    color: #76B900;
 }
 
 .features-grid {
@@ -514,7 +515,8 @@ video playing related bug
 
 .feature-card h4 {
     font-size: 18px;
-    color: var(--text-dark);
+    /* color: var(--text-dark); */
+    color: #76B900;
     margin-bottom: 20px;
 }
 
@@ -548,7 +550,8 @@ video playing related bug
 .facts-box h3 {
     font-size: 24px;
     margin-bottom: 25px;
-    color: var(--text-dark);
+    /* color: var(--text-dark); */
+    color: #76B900;
 }
 
 .facts-content p {
@@ -1271,4 +1274,9 @@ footer {
 .highlight {
     color: #76B900;
     font-weight: 700;
+}
+
+/* Project at a glance 标题 */
+.overview-content h4 {
+    color: #76B900;
 }
