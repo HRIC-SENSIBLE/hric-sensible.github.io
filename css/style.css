@@ -1280,3 +1280,17 @@ footer {
 .overview-content h4 {
     color: #76B900;
 }
+
+/* Event Images */
+.event-image {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.event-image img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
