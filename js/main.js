@@ -253,4 +253,54 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // ========================================
+    // Video Lightbox for Demo Videos
+    // ========================================
+    const videoLightbox = document.getElementById('videoLightbox');
+    const lightboxVideo = document.getElementById('lightbox-video');
+    const videoLightboxClose = document.querySelector('.video-lightbox-close');
+
+    if (videoLightbox) {
+        // Click video to open lightbox
+        document.querySelectorAll('.demo-video-player').forEach(video => {
+            video.addEventListener('click', function(e) {
+                // Only trigger lightbox on single click, not on controls
+                if (e.target === this) {
+                    e.preventDefault();
+                    this.pause();
+                    lightboxVideo.querySelector('source').src = this.querySelector('source').src;
+                    lightboxVideo.load();
+                    lightboxVideo.currentTime = this.currentTime;
+                    videoLightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    lightboxVideo.play();
+                }
+            });
+        });
+
+        // Close function
+        function closeVideoLightbox() {
+            lightboxVideo.pause();
+            videoLightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close - click X
+        videoLightboxClose.addEventListener('click', closeVideoLightbox);
+
+        // Close - click background
+        videoLightbox.addEventListener('click', function(e) {
+            if (e.target === videoLightbox) {
+                closeVideoLightbox();
+            }
+        });
+
+        // Close - press ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && videoLightbox.classList.contains('active')) {
+                closeVideoLightbox();
+            }
+        });
+    }
 });

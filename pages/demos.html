@@ -69,7 +69,10 @@
                     teleoperate another remote robot performing the drain hole cleaning task on a blade based on visual feedback through a VR headset.
                 </p>
                 <div class="demo-video">
-                    <p><em>Video coming soon...</em></p>
+                    <video class="demo-video-player" controls preload="metadata" playsinline>
+                        <source src="../videos/demo-integration1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
 
@@ -126,6 +129,14 @@
             <p>© 2025 SENSIBLE Project. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Video Lightbox -->
+    <div class="video-lightbox-overlay" id="videoLightbox">
+        <span class="video-lightbox-close">&times;</span>
+        <video id="lightbox-video" controls playsinline>
+            <source src="" type="video/mp4">
+        </video>
+    </div>
 
     <script src="../js/main.js"></script>
 </body>
